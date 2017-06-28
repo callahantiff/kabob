@@ -62,7 +62,7 @@ echo "KB_DATA_DIR=${KB_DATA_DIR}"
 
 ### create skos:exactMatch links between equivalent ICE identifiers
 #${SCRIPT_DIR}/stardog-specific/RUN_RULES_AND_LOAD-STARDOG.sh rules/pre_identifier_merge/post_ice_rdf_load/step_a_ice_id_typing
-${SCRIPT_DIR}/stardog-specific/RUN_RULES_AND_LOAD-STARDOG.sh rules/pre_identifier_merge/post_ice_rdf_load/step_b_ice_id_exact_match/datasource_xref
+${SCRIPT_DIR}/stardog-specific/RULES-STARDOG.sh rules/pre_identifier_merge/post_ice_rdf_load/step_b_ice_id_exact_match/datasource_xref
 
 
 #### Create the ID sets
