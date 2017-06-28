@@ -5,7 +5,7 @@
 
 `{:name "hgnc-gene-symbol-supplied-entrez-identifier-exact-match"
   :description "This rule asserts an exact match between a hgnc symbol and an supplied entrez gene"
-  :head ((?/hgncSymbolIce skos/exactMatch ?/egIce))
+  :head ((?/hgnc_gene_symbol_identifier skos/exactMatch ?/ncbi_gene_identifier))
   :body ((?/record rdf/type ccp/IAO_EXT_0000055) ; CCP:HGNC_gene_record
           (?/record obo/BFO_0000051 ?/gene_symbol_field_value)
           (?/gene_symbol_field_value rdf/type ccp/IAO_EXT_0000042) ; CCP:HGNC_gene_record_gene_symbol_field_value
