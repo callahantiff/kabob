@@ -35,10 +35,10 @@ ${SCRIPT_DIR}/allegrograph-specific/load-list-file-ag.sh \
   ${KB_DATA_DIR}/file-lists/owl-files.${KB_NAME}.list \
   "ntriples"
 
-### create ICE records for all ontology concepts
-${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_a_ontology_to_ice/step_a_ontology_root_identifier_gen
-${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_a_ontology_to_ice/step_b_ontology_id_denotes_concept
-${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_a_ontology_to_ice/step_c_ontology_ice_record_gen
+#### create ICE records for all ontology concepts
+#${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_a_ontology_to_ice/step_a_ontology_root_identifier_gen
+#${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_a_ontology_to_ice/step_b_ontology_id_denotes_concept
+#${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_a_ontology_to_ice/step_c_ontology_ice_record_gen
 
 #### create skos:exactMatch links between equivalent ontology identifiers
 #${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_b_ontology_id_exact_match/chebi
@@ -46,17 +46,17 @@ ${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifie
 #${SCRIPT_DIR}/allegrograph-specific/RUN_RULES_AND_LOAD-AG.sh rules/pre_identifier_merge/pre_ice_rdf_load/step_b_ontology_id_exact_match/shared_label
 #
 #
-#### Load the ICE RDF - the rules above process the ontologies only, so we have waited to load the ICE RDF until this point
-#${SCRIPT_DIR}/allegrograph-specific/load-list-file-ag.sh \
-#  ${KB_PORT} \
-#  ${KB_NAME} \
-#  ${KB_DATA_DIR}/file-lists/ice-nt-files.${KB_NAME}.list
-#
-#${SCRIPT_DIR}/allegrograph-specific/load-list-file-ag.sh \
-#  ${KB_PORT} \
-#  ${KB_NAME} \
-#  ${KB_DATA_DIR}/file-lists/ice-owl-files.${KB_NAME}.list \
-#  "rdfxml"
+### Load the ICE RDF - the rules above process the ontologies only, so we have waited to load the ICE RDF until this point
+${SCRIPT_DIR}/allegrograph-specific/load-list-file-ag.sh \
+  ${KB_PORT} \
+  ${KB_NAME} \
+  ${KB_DATA_DIR}/file-lists/ice-nt-files.${KB_NAME}.list
+
+${SCRIPT_DIR}/allegrograph-specific/load-list-file-ag.sh \
+  ${KB_PORT} \
+  ${KB_NAME} \
+  ${KB_DATA_DIR}/file-lists/ice-owl-files.${KB_NAME}.list \
+  "rdfxml"
 #
 ##### Index optimization -- not currently implemented
 ###${SCRIPT_DIR}/optimize.sh \
