@@ -42,7 +42,7 @@
          )
   
   :reify ([?/molecular_function_sc {:ln (:sha-1 ?/molecular_function ?/participating_bioentity)
-                 :ns "ccp" :prefix "BP_"}]
+                 :ns "ccp" :prefix "MF_"}]
           [?/bioentity_sc {:ln (:sha-1 ?/molecular_function ?/participating_bioentity)
                     :ns "ccp" :prefix "B_"}]
           [?/participation_restriction {:ln (:restriction)
